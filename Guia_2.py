@@ -9,3 +9,7 @@ print(numericos)
 print(especiales)
 '''
 ##Ejercicio 2 
+
+str = "contar caracater especifico"
+char = 'a'
+print(str.count(char))
