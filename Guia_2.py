@@ -19,8 +19,20 @@ print(str.count(char))'
 str = "Cambiar a mayus"
 print(str.swapcase())'
 '''
-##Ejercicio 4
+##Ejercicio 5
+'''
 str = "Estructura de datos alfa"
 lista = str.split()
 print(max(lista,key=len))
-print(min(lista,key=len))
+print(min(lista,key=len))'
+'''
+#Ejercicio 6
+str = "Estructura de datos alfa"
+lista = list(set(str))
+for a in lista:
+    num = 0
+    for char in str:
+        if char == a:
+            num +=1
+    print(a,':',num)
+
