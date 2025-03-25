@@ -37,3 +37,18 @@ for a in lista:
             num +=1
     print(a,':',num)
 '''
+#Ejercicio 7
+'''
+Palabras=["La","materia","Estructuras","de","Datos","es","genial"]
+primeraPalabra = 'La'
+segundaPalabra = 'es'
+diff = Palabras.index(segundaPalabra) - Palabras.index(primeraPalabra)
+print(diff)
+'''
+#Ejercicio 8
+
+
+
+
+
+
