@@ -27,6 +27,7 @@ print(max(lista,key=len))
 print(min(lista,key=len))'
 '''
 #Ejercicio 6
+'''
 str = "Estructura de datos alfa"
 lista = list(set(str))
 for a in lista:
@@ -35,4 +36,4 @@ for a in lista:
         if char == a:
             num +=1
     print(a,':',num)
-
+'''
