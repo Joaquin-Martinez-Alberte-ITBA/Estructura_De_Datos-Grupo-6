@@ -1,4 +1,4 @@
-###ejercicio 9###
+###ejercicio 9### hola
 '''
 def probar():
     a = (1, 2, [1, 2, 3])
@@ -6,3 +6,4 @@ def probar():
     print(a)
 probar()
 '''
+print("Nico se la come")
