@@ -46,6 +46,47 @@ diff = Palabras.index(segundaPalabra) - Palabras.index(primeraPalabra)
 print(diff)
 '''
 #Ejercicio 8
+'''
+def comprimir_y_revertir(cadena):
+    if not cadena:
+        return ""
+    comp = ""
+    count = 1
+    for i in range(1, len(cadena)):
+        if cadena[i] == cadena[i-1]:
+            count += 1
+        else:
+            comp += cadena[i-1] + format(count, 'x')
+            count = 1
+    comp += cadena[-1] + format(count, 'x')
+    return comp[::-1]
+entrada = "aaaaaaaaaaa"
+resultado = comprimir_y_revertir(entrada)
+print(resultado)  '
+'''
+#Ejercicio 9
+def reducir_cadena(cadena, k):
+    stack = []
+    for char in cadena:
+        if stack and stack[-1][0] == char:
+            contador = stack[-1][1] + 1
+            stack[-1] = (char, contador)
+            if contador == k:
+                stack.pop()
+        else:
+            stack.append((char, 1))
+    resultado = "".join(char * contador for char, contador in stack)
+    return resultado
+cadena_entrada = "esteeparaestee"
+k = 2
+resultado = reducir_cadena(cadena_entrada, k)
+print(resultado) 
+
+        
+    
+
+
+
 
 
 
