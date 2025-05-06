@@ -4,8 +4,9 @@ class Lista():
     def __init__(self, inicio=None):
         self.inicio=inicio
     
-    def agregarNodoAlInicio(self,nodo):
+    def agregarNodoAlInicio(self,valor):
         #Didactico
+        nodo=Nodo(valor)
         if self.inicio==None:
             self.inicio=nodo
         else:
@@ -15,7 +16,8 @@ class Lista():
         # nodo.sig=self.inicio
         # self.inicio=nodo
     
-    def agregarNodoAlFinal(self,nodo):
+    def agregarNodoAlFinal(self,valor):
+        nodo=Nodo(valor)
         if self.inicio==None:
             self.inicio=nodo
         else:
@@ -91,3 +93,6 @@ if __name__ == "__main__":
     print("\nEliminando el número 10 (que no existe):")
     lista.eliminar(10)
     lista.mostrarLista()
+    
+    
+    def __iter__(self):

@@ -1,8 +1,11 @@
+from claseNodo import Nodo
+from lista import Lista
 #Parte 1
+
 class Camion:
-    lista_camiones = []
-    lista_patentes = []
-    lista_anios = []
+    lista_camiones = Lista()
+    lista_patentes = Lista()
+    lista_anios = Lista()
     def __init__(self, patente, carga, marca, anio):
         if patente in Camion.lista_patentes:
             raise ValueError(f"Error: La patente '{patente}' ya está en uso.")
@@ -10,9 +13,9 @@ class Camion:
         self.carga = carga
         self.marca = marca
         self.anio = anio
-        Camion.lista_camiones.append(self)
-        Camion.lista_patentes.append(patente)
-        Camion.lista_anios.append(anio)
+        Camion.lista_camiones.agregarNodoAlInicio(self)
+        Camion.lista_patentes.agregarNodoAlInicio(patente)
+        Camion.lista_anios.agregarNodoAlInicio(anio)
 
     def __str__(self) -> str:
         return f'''Camion #{self.patente}\nCarga: {self.carga}\n
