@@ -18,7 +18,7 @@ class Mascota:
             "Disponible": self.disponible
         }
 class Adoptante:
-    def __init__(self, nombre, dni):
+    def __init__(self, nombre, dni,cantidad_adopciones=0):
         self.nombre = nombre
         self.dni = dni
         self.historial_adopciones = []
@@ -34,7 +34,8 @@ class Adoptante:
             "Nombre": self.nombre,
             "DNI": self.dni,
             "Cantidad de adopciones": len(self.historial_adopciones)
-        }
+    def 
+        }      
 class Adopcion:
     def __init__(self, id_adopcion, adoptante, mascota, fecha_adopcion):
         self.id_adopcion = id_adopcion
@@ -75,6 +76,10 @@ class Refugio:
     def buscar_adoptante(self, dni):
         return next((a for a in self.adoptantes if a.dni == dni), None)
 
+    def usuarios_mas_adopciones(self):
+        lista=self.adoptantes
+        lista.sort(lambda x : x.cantidad_adopciones)
+        filter(lambda x : lista[0] , self.adoptantes.cantidad_adopciones)
     # Adopciones
     def registrar_adopcion(self, id_adopcion, dni, identificador_mascota, fecha):
         adoptante = self.buscar_adoptante(dni)
@@ -83,6 +88,7 @@ class Refugio:
             mascota.adoptar_mascota()
             adopcion = Adopcion(id_adopcion, adoptante, mascota, fecha)
             adoptante.registrar_adopcion(adopcion)
+            adoptante.cantidad_adopciones+=1
             self.adopciones.append(adopcion)
             return adopcion
         else:
