@@ -47,7 +47,6 @@ class Lancha(Vehiculo):
         self.rei = rei
         self.marca_motor = marca_motor
         self.tipo = tipo
-
     def trasladarse(self, desplazamiento):
         self.posicion += desplazamiento
         print(f"Se dezplaza por agua a {self.tipo} a la posicion {desplazamiento}")
